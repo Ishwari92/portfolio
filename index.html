@@ -1,205 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ishwari Pawar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<style>
-    .navbar-brand img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: 10px;
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white; /* Or any other color */
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000; /* Keeps it above other elements */
     }
 
-    .nav-link{
-        color: black;
+    .nav-link {
+      color: black;
     }
-    
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
     .hero-section {
-            height: 92vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
-            background-color: #f8f9fa;
-        }
-        .hero-title {
-            font-weight: 700;
-            font-size: 2.5rem;
-        }
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: #6c757d;
-            margin-bottom: 20px;
-        }
-        .btn-primary {
-            background: #6C4EED;
-            border: none;
-            font-weight: 600;
-            padding: 12px 24px;
-            border-radius: 8px;
-            transition: 0.3s ease-in-out;
-        }
-        .btn-primary:hover {
-            background: #563BDB;
-        }
-        .nav-item{
-            margin-right: 15px !important;
+      background: url("https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430867.jpg?t=st=1743002009~exp=1743005609~hmac=b0afc3caaf19ad35272d66ee067c441bbb43b417c10d3a62724324715d716ee9&w=1380");
+      background-size: cover;
+      height: 100vh; /* Adjust based on preference */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      opacity: 0.9;
+
+    }
+
+    .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; 
+
+            background: rgba(0, 0, 0, 0.8); /* Black overlay */
         }
 
-       
 
+    /* .hero-section {
+      height: 92vh;
+      width: 100%;
 
-</style>
-<body>
-
-
-    <div class="cover-container d-flex h-100  flex-column">
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+      background-color: #f8f9fa;
+    } */
+    .hero-title {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      background: #6c4eed;
+      border: none;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 8px;
+      transition: 0.3s ease-in-out;
+    }
+    .btn-primary:hover {
+      background: #563bdb;
+    }
+    .nav-item {
+      margin-right: 15px !important;
+    }
+  </style>
+  <body>
+    <div class="cover-container d-flex h-100 flex-column">
         <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <!-- <img src="profile.jpg" alt="Profile"> -->
-                    <strong style="color: black;">ISHWARI PAWAR</strong>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link fw-bold" href="#">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link fw-bold" href="#">ABOUT</a></li>
-                        <li class="nav-item"><a class="nav-link fw-bold" href="#">SKILL</a></li>
-                        <li class="nav-item"><a class="nav-link fw-bold" href="#">CONTACT</a></li>
-                    </ul>
-                </div>
+          <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <!-- <img src="profile.jpg" alt="Profile"> -->
+              <strong style="color: black">ISHWARI PAWAR</strong>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link fw-bold" href="#home_section">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bold" href="#about_me">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bold" href="#skills">SKILL</a>
+                </li>
+                <li class="nav-item">
+                  <!-- <a class="nav-link fw-bold" href="#">CONTACT</a> -->
+                </li>
+              </ul>
             </div>
+          </div>
         </nav>
-    
-    
-    
-        <div class="hero-section container">
-            <div class="d-flex  flex-column align-items-center">
-                <h1 class="fw-bold mt-5" style="font-size:60px">HEY, I'M ISHWARI PAWAR</h1>
-                <p class="text-muted text-center mt3" style="font-size: 20px;">
-                    A Result-Oriented Web Developer building and managing Websites and Web <br>
-                    Applications that lead to the success of the overall product.
-                </p>
-                <a href="./Ishwari Pawar.pdf" target="_blank" class="btn btn-primary btn-lg px-5 mt-3" style="background: #6C4EED; border: none;">RESUME</a>
-            </div>
-        </div>
-
-
-
     </div>
-    
-    
-    <div class="container">
-        <div class="d-flex  my-5 flex-column align-items-center">
-            <h1 class="fw-bold ">ABOUT ME</h4>
-            <span class="about_heading"></span>
-            <p class="text-muted text-center mt3" style="font-size: 20px;">
-                Here you will find more information about me, what I do, and my current skills mostly in terms<br> of programming and technology
-            </p>
+    <div class="hero-section" id="home_section">
+        <div class="align-items-center" style="z-index: 1;">
+          <h1 class="fw-bold mt-5 text-white" style="font-size: 60px;color: black;">
+            HEY, I'M ISHWARI PAWAR
+          </h1>
+
+          <p class="text-muted text-center mt3" style="font-size: 20px">
+            A Result-Oriented Web Developer building and managing Websites and
+            Web <br />
+            Applications that lead to the success of the overall product.
+          </p>
+
+          <div class="col-lg-12" style="margin-left: 6px;">
+              <a title="Email" target="_blank" class="flex h-10 text-white w-10 items-center justify-center rounded-lg  bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary" href="mailto:pawarishwari797@gmail.com"><svg style="width: 20px;margin-right:15px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square-envelope" class="svg-inline--fa fa-square-envelope " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM218 271.7L64.2 172.4C66 156.4 79.5 144 96 144l256 0c16.5 0 30 12.4 31.8 28.4L230 271.7c-1.8 1.2-3.9 1.8-6 1.8s-4.2-.6-6-1.8zm29.4 26.9L384 210.4 384 336c0 17.7-14.3 32-32 32L96 368c-17.7 0-32-14.3-32-32l0-125.6 136.6 88.2c7 4.5 15.1 6.9 23.4 6.9s16.4-2.4 23.4-6.9z"></path></svg></a>
+
+              <a title="Phone Number" target="_blank" class="flex h-10 text-white w-10 items-center justify-center rounded-lg  bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary" href="tel:+91 9870423161"><svg style="width: 20px;margin-right:15px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path></svg></a>
+
+              <a title="facebook" target="_blank" class="flex h-10 text-white w-10 items-center justify-center rounded-lg  bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary" href="https://api.whatsapp.com/send/?phone=919870423161&text=Hi+there"><svg style="width: 20px;margin-right:15px" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="whatsapp" class="svg-inline--fa fa-whatsapp " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg></a>
+
+              <a title="github" target="_blank" class="flex h-10 text-white w-10 items-center justify-center rounded-lg bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary" href="https://github.com/Ishwari92"><svg style="width: 20px;margin-right:15px" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
+
+              <a title="linkedIn" target="_blank" class="flex h-10 text-white w-10 items-center justify-center rounded-lg bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary" href="https://www.linkedin.com/in/ishwari-p-179b2b129/"><svg style="width: 20px;margin-right:15px" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>
+          </div>
+          <div
+            class="col-lg-12 text-center align-items-center justify-content-center"
+          >
+            <a
+              href="./Ishwari Pawar Resume.pdf"
+              target="_blank"
+              class="btn btn-primary btn-lg px-5 mt-3"
+              style="background: #6c4eed; border: none"
+              >RESUME</a
+            >
+          </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-lg-6 mt-5">
+    </div>
+    <div class="container" id="about_me" style="height: 100%; ">
+      <div class="d-flex my-5 flex-column align-items-center">
+        <h1>About Me</h1>
+        <p class="text-muted text-center" style="font-size: 20px">
+          Here you will find more information about me, what I do, and my
+          current skills mostly in terms <br />of programming and technology
+        </p>
+      </div>
+      <div class="row justify-content-center" style="margin-top: 100px;margin-bottom: 170px;">
+        <div class="col-lg-6"  style="border-right: 1px solid grey;">
             <h2 class="mb-4 mx-4">Get Know About Me !</h2>
-            <p style="font-size: 20px;margin-left:30px;margin-right: 20px;">
-                Hi, I'm a PHP Web Developer passionate about building dynamic, scalable, and secure web applications. I specialize in backend development, crafting efficient code, and creating seamless user experiences.
-            </p>
+            <p class="mx-4">✔️ 3+ years of hands-on experience in PHP Laravel development</p>
+            <p class="mx-4">✔️ Strong problem-solving skills and ability to write clean, scalable code</p>
+            <p class="mx-4">✔️ Experience in building APIs and integrating third-party services</p>
+            <p class="mx-4">✔️ Passionate about learning and implementing new technologies</p>
+            
+
+
+            
+            
+            
           
         </div>
-        <div class="col-lg-6 mt-5">
+        <div class="col-lg-6">
             <h2 class="mb-2 mx-4">Education</h2>
-            <h5 class="mx-4">Bachelor of Engineering - Information Technology (IT)</h5>
-            <p class="mx-4">2018 - 2022</p>
+            <h5 class="mx-4">BSc in Information Technology (IT) </h5>
+            <p class="mx-4">2018 - 2021</p>
         </div>
+      </div>
     </div>
+    <!-- <hr> -->
+    <div class="container my-5" id="skills" >
+      <h1 style="text-align: center;">My Skills</h1>
+      <div>
+        <p class="text-muted text-center mb-5" style="font-size: 20px">
+          Here are some of the technologies I've been working with recently:
+        </p>
+      </div>
+      <div class="row justify-content-center mb-5" tyle="margin-bottom: 200px;">
+        <div class="col-lg-6">
+          <div class="row" style="border-right: 1px solid grey;">
+            <h2 class="mb-5">Technical Skills</h2>
 
-    <hr>
+            <div class="col-3">
+              <img
+                src="./image/laravel.png"
+                alt=""
+                style="height: 50px; width: 50px"
+              />
+              <p>Laravel</p>
+            </div>
+            <div class="col-3">
+              <img
+                src="./image/php.png"
+                alt=""
+                style="height: 50px; width: 50px"
+              />
+              <p>Php</p>
+            </div>
+            <div class="col-3">
+              <img
+                src="./image/javascript.png"
+                alt=""
+                style="height: 50px; width: 70px"
+              />
+              <p>Javascript</p>
+            </div>
+            <div class="col-3">
+              <img
+                src="./image/bootstrap.webp"
+                alt=""
+                style="height: 50px; width: 50px"
+              />
+              <p>Bootstrap</p>
+            </div>
+            <div class="col-3">
+              <img
+                src="./image/tailwind.png"
+                alt=""
+                style="height: 50px; width: 50px"
+              />
+              <p style="font-size: 14px">Tailwind Css</p>
+            </div>
+            <div class="col-3">
+              <img
+                src="./image/onesignal.jpg"
+                alt=""
+                style="height: 50px; width: 50px"
+              />
+              <p style="font-size: 14px">One Signal</p>
+            </div>
+            <div class="col-3">
+              <img
+                src="./image/OIP.jpg"
+                alt=""
+                style="height: 50px; width: 50px"
+              />
+              <p>Pusher</p>
+            </div>
+            <div class="col-3">
+              <img
+                src="./image/MySql.png"
+                alt=""
+                style="height: 50px; width: 50px"
+              />
+              <p>MySql</p>
+            </div>
+            <div class="col-3">
+              <img
+                src="./image/github_PNG84.png"
+                alt=""
+                style="height: 50px; width: 50px"
+              />
+              <p>GitHub</p>
+            </div>
+            <div class="col-3">
+              <img
+                src="./image/jquery.jpg"
+                alt=""
+                style="height: 50px; width: 50px"
+              />
+              <p>Jquery</p>
+            </div>
+          </div>
+        </div>
 
-     <div class="row mx-5 mb-5 mt-5">
         <div class="col-lg-6 mb-5">
-            <h2 class="mb-5"> Technical Skills</h2>
-            <!-- -->
-            <div class="row">
-                    <div class="col-3">
-                        <img src="./image/laravel.png" alt="" style="height: 50px;width: 50px;">
-                        <p>Laravel</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="./image/php.png" alt="" style="height: 50px;width: 50px;">
-                        <p>Php</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="./image/javascript.png" alt="" style="height: 50px;width: 70px;">
-                        <p>Javascript</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="./image/bootstrap.webp" alt="" style="height: 50px;width: 50px;">
-                        <p>Bootstrap</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="./image/tailwind.png" alt="" style="height: 50px;width: 50px;">
-                        <p style="font-size: 14px;">Tailwind Css</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="./image/onesignal.jpg" alt="" style="height: 50px;width: 50px;">
-                        <p style="font-size: 14px;">One Signal</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="./image/OIP.jpg" alt="" style="height: 50px;width: 50px;">
-                        <p>Pusher</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="./image/MySql.png" alt="" style="height: 50px;width: 50px;">
-                        <p>MySql</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="./image/github_PNG84.png" alt="" style="height: 50px;width: 50px;">
-                        <p>GitHub</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="./image/jquery.jpg" alt="" style="height: 50px;width: 50px;">
-                        <p>Jquery</p>
-                    </div>
+          <h2 class="mb-5 mx-4" >Experience</h2>
+
+          <div class="row  mx-4">
+            <div class="col-6">
+              <p></p>
+              <p>12/2022 - present</p>
             </div>
-               
-                
-        </div>
-        <div class="col-lg-5">
-            <h3 class="mb-3">Experience</h3>
-
-            <div class="row">
-                <div class="col-6">
-                    <p></p>
-                    <p>12/2022 - present</p>
-                </div>
-                <div class="col-6">
-                    <h5>Appdid Infotech</h5>
-                    <p>Web Developer</p>
-                </div>
-                <div class="col-6">
-                    <p></p>
-                    <p>11/2021 - 12/2022</p>
-                </div>
-                <div class="col-6">
-                    <h5>Iresolve Sevices</h5>
-                    <p>Web Developer</p>
-                </div>
-
+            <div class="col-6">
+              <h5>Appdid Infotech</h5>
+              <p>Web Developer</p>
             </div>
+            <div class="col-6">
+              <p></p>
+              <p>11/2021 - 12/2022</p>
+            </div>
+            <div class="col-6">
+              <h5>Iresolve Sevices</h5>
+              <p>Web Developer</p>
+            </div>
+          </div>
         </div>
-    </div> 
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</body>
+      </div>
+    </div>
+    <!-- <hr> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
